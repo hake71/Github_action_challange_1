@@ -3,7 +3,7 @@ name: Multi-Job Workflow
 on: [push]
 
 jobs:
-  build-ubuntu:
+  ubuntu:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,7 +20,7 @@ jobs:
       - name: Run binary
         run: ./main
 
-  build-windows:
+  windows:
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -37,7 +37,7 @@ jobs:
       - name: Run binary
         run: .\main.exe
 
-  build-macos:
+  macos:
     runs-on: macos-latest
     steps:
       - name: Checkout code
